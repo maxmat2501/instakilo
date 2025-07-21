@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #E0E0E0;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+a {
+    color: #03DAC6;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+header, nav, footer {
+    background-color: #1E1E1E;
+    padding: 10px 20px; /* réduit l'épaisseur */
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    max-width: 1040px;
+    margin: 0 auto 30px auto; /* ← centrage horizontal */
+    display: flex;
+    justify-content: space-between; /* image à gauche, icône à droite */
+    align-items: center;            /* alignement vertical centré */
+}
+
+
+
+h1, h2, h3 {
+    color: #BB86FC;
+    margin-bottom: 15px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.post-card {
+    max-width: 600px;  
+    margin: 20px auto;    
+    background-color: #1E1E1E;  
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #2C2C2C;
+    color: #E0E0E0;
+    border: 1px solid #444;
+    border-radius: 12px;
+}
+
+button,
+input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover,
+input[type="submit"]:hover {
+    background-color: #444;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1A1A1A;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #333;
+}
+
+th {
+    background-color: #2A2A2A;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.logo {
+    max-height: 60px;
+    filter: none !important;
+}
+
+header .profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #BB86FC;
+}
+
+.success {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.error {
+    color: #F44336;
+    font-weight: bold;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #BB86FC;
+    box-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
+}
+
+header img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    filter: none;
+    display: block;
+    margin: 0 auto;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;      /* centre verticalement avatar + nom */
+    gap: 12px;                /* espace entre avatar et nom */
+    margin-bottom: 15px;
+}
+
+.post-header .username {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #BB86FC;
+}
+
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1E1E1E;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    border-top: 1px solid #333;
+}
+
+.create-post-btn {
+    position: static; /* plus de position fixed ici */
+    width: 50px;
+    height: 50px;
+    background-color: #BB86FC;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    line-height: 0;
+}
+
+.create-post-btn:hover {
+    background-color: #9A6BFF;
+}
+
+
+.heart {
+    font-size: 24px;
+    cursor: pointer;
+    color: grey;
+    transition: color 0.3s ease;
+    user-select: none;
+}
+.heart.liked {
+    color: red;
+}
+.like-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
